@@ -494,7 +494,7 @@ module RVideo # :nodoc:
     FPS = 'fps(?:\(r\))?'
     
     VIDEO_MATCH_PATTERN = /
-      Stream\s*(\#[\d.]+)(?:[\(\[].+?[\)\]])?\s*                  # stream id
+      Stream\s*(\#[\d.:]+)(?:[\(\[].+?[\)\]])?\s*                 # stream id
       [,:]\s*                                                     
       (?:#{RATE}\s*#{FPS}[,:]\s*)?                                # frame rate, older builds
       Video:\s*                                                   
