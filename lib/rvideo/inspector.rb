@@ -445,6 +445,7 @@ module RVideo # :nodoc:
     #   "29.97"
     #
     def fps
+      puts video_match[7]
       return nil unless video?
       video_match[2] || video_match[13] || video_match[14]
     end
@@ -474,7 +475,7 @@ module RVideo # :nodoc:
     VAL = '([^,]+)'
     
     RATE = '([\d.]+k?)'
-    PAR_DAR = '(?:\s*\[?(?:PAR\s*(\d+:\d+))?\s*(?:DAR\s*(\d+:\d+))?\]?)?'
+    PAR_DAR = '(?:\s*\[?(?:(?:PAR|SAR)\s*(\d+:\d+))?\s*(?:DAR\s*(\d+:\d+))?\]?)?'
     
     AUDIO_MATCH_PATTERN = /
       Stream\s+(.*?)[,:\(\[].*?\s*
