@@ -445,7 +445,6 @@ module RVideo # :nodoc:
     #   "29.97"
     #
     def fps
-      puts video_match[7]
       return nil unless video?
       video_match[2] || video_match[13] || video_match[14]
     end
