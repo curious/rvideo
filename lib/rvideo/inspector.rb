@@ -471,7 +471,7 @@ module RVideo # :nodoc:
     # of this regexp parsery by using split(/\s*,\s*/) - Seth
     
     SEP = '(?:,\s*)'
-    VAL = '([^,]+)'
+    VAL = '([^,]+(?:\([^\)]*\))?)' # everything up to the first comma, including optional parentheses which may include a comma: "yuv420p(tv, smpte170m), ..."
     
     RATE = '([\d.]+k?)'
     PAR_DAR = '(?:\s*\[?(?:(?:PAR|SAR)\s*(\d+:\d+))?\s*(?:DAR\s*(\d+:\d+))?\]?)?'
